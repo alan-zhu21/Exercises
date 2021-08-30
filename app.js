@@ -1,14 +1,6 @@
-function removeVowels(str) {
-    function isVowel(char) {
-        if ('aeiou'.indexOf(char) !== -1) return true;
-    }
-    let removedVowels = '';
-    str.toLowerCase().split('').forEach(function (val) {
-        if (!isVowel(val)) {
-            removedVowels += val;
-        }
+function extractValue(arr, key) {
+    const finalArr = [];
+    return arr.reduce(function (obj) {
+        finalArr.push(obj[key]);
     })
-    return removedVowels;
 }
-
-removeVowels('Elie')
