@@ -47,9 +47,11 @@ const board = []; // array of rows, each row is array of cells  (board[y][x])
 //   };
 // }
 
+//why didn't this approach work?
+
 function makeBoard() {
   for (let y = 0; y < HEIGHT; y++) {
-    board.push(Array.from({ length: WIDTH }));
+    board.push(Array.from({ length: WIDTH })); //ask about how this works
   }
 }
 
@@ -131,7 +133,7 @@ function handleClick(evt) {
   // place piece in board and add to HTML table
   // TODO: add line to update in-memory board
   placeInTable(y, x);
-  board[y][x] = currPlayer;
+  board[y][x] = currentPlayer;
 
   // check for win
   if (checkForWin()) {

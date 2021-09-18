@@ -1,0 +1,52 @@
+Part One: Solidify Terminology
+In your own terms, define the following terms:
+
+What is HTTP?
+hypertext transfer protocol which is a method used to parse and interpret data sent and received through the internet
+What is a URL?
+a uniform resource locator which is a string of data that when parsed tells a server what a client or browser is looking for
+What is DNS?
+domain name service/system is like a conversion tool that converts a host name to an ip address so the computer or server can understand where to send a request
+What is a query string?
+a query string provides extra information for the request
+What are two HTTP verbs and how are they different?
+GET and POST are HTTP verbs and they differ in that GET puts information in the query string while POST does not. POST is recommended for transferring sensitive information such as credit card information.
+What is an HTTP request?
+a client-initiated request for information
+What is an HTTP response?
+a server-completed response to a request for information
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+Hostname, date the browser thinks it is, language, cookies, caching information, and content type. GET requests have hostname, date, language, and cookies while POST requests have content type, date, cookies, and caching information
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+The url is parsed into separate pieces of data and translated. The DNS finds the corresponding IP address for the host name, the client connects on the default port, and the request is sent as a header in a GET request, passing along a resource page as well as any query strings in the url. The server handles the request and sends a response to the browser and the browser loads the html contents on the page.
+
+Part Two: Practice Tools
+Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”
+curl https://icanhazdadjoke.com/search?term=pirate
+Use dig to find what the IP address is for icanhazdadjoke.com
+dig icanhazdadjoke.com => 104.21.37.176 and 172.67.211.64
+Make a simple web page and serve it using python3 -m http.server. Visit the page in a browser.
+
+Part Three: Explore Dev Tools
+Build a very simple HTML form that uses the GET method (it can use the same page URL for the action) when the form is submitted.
+    <form method='GET'>
+        <input type='text' placeholder='Movie Title' name='movie'>
+        <button type='submit'>Search!</button>
+    </form>
+Add a field or two to the form and, after submitting it, explore in Chrome Developer tools how you can view the request and response headers.
+Use the Network tab
+Edit the page to change the form type to POST, refresh in the browser and re-submit. Do you still see the field in the query string? Explore in Chrome how you can view the request and response headers, as well as the form data.
+The query string no longer displays the value of the input HTML element when using the POST method as opposed to the GET method. To view request/response headers, in the Network tab, click the name of the file to display the headers for the request which shsows the request URL, a referrer policy pertaining to origin/cross-origins, and either query string values or form elements depending on which method you used for the HTTP request.
+
+Part Four: Explore the URL API
+At times, it’s useful for your JavaScript to look at the URL of the browser window and change how the script works depending on parts of that (particularly the query string).
+
+const URLTest = new URL("https://www.google.com/search?terms=springboard");
+URLTest.hash, URLTest.host, URLTest.href, URLTest.pathname, URLTest.protocol
+
+Read about the URL API
+
+Try some of the code examples in the Chrome Console so that you can get comfortable with the basic methods and properties for instances of the URL class.
+
+URLTest.searchParams.get('resource');
+typeof URLTest.toString();
