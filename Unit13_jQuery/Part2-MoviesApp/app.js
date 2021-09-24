@@ -12,14 +12,23 @@ $('#movie-form').on('submit', function (e) {
     $('input').val('');
 })
 
-// $('#sort button').on('click', '#sort-title', function () {
+$('#sort-title').on('click', function (event) {
+// get list of movies
+    let movieList = $('#list').children();
+// sort array
+    console.log(movieList[0].innerText);
+    movieList.sort(sortByMovieTitle);
+    console.log(movieList[0].innerText);
+// delete list of movies in html and replace with sorted list
+    $('#list').children().replace(movieList);
+})
 
-//     // $.map($('li').get(), function(val, idx) {
-//     //     val > 
-//     // })
-
-//     // $('#list').map(function (val, idx) {
-
-//     // })
-//     //use after() and before() in a ternary opperation
-// })
+function sortByMovieTitle(el1, el2) {
+    if (el1.innerText > el2.innerText) {
+        return 1;
+    }
+    if (el1.innerText < el2.innerText) {
+        return -1;
+    }
+    return 0;
+}
