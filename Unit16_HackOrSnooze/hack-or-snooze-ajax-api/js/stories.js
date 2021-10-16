@@ -23,6 +23,7 @@ function generateStoryMarkup(story) {
 	// console.debug("generateStoryMarkup", story);
 
 	const hostName = story.getHostName();
+	// check if they are logged in too
 	// let starType = story.favorited === true ? 'fas fa-star' : 'far fa-star';
 	// <i class="${starType}"></i>
 	return $(`
@@ -132,9 +133,6 @@ function checkForFavorites() {
 		return currentUser.favorites.map((s) => s.storyId).includes(this.id);
 	});
 	myStories.each((s) => (myStories[s].children[0].childNodes[1].className = 'fas fa-star'));
-	// favorites.each(function(s) {
-	// 	return (favorites.find('i').className = 'fas fa-star');
-	// });
 }
 
 function addTrashCans() {
