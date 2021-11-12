@@ -10,3 +10,5 @@ def test_all_exercises():
     #     cd dir
     #     %run f'{dir}.py'
     #     cd ..
+
+    
