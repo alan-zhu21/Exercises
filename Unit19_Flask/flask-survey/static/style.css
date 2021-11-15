@@ -1,0 +1,12 @@
+p {
+	display: inline;
+}
+
+button {
+	display: block;
+	margin: 10px;
+}
+
+label {
+	display: block;
+}
