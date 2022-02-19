@@ -1,4 +1,4 @@
-import app
+from app import app
 from models import User
 from unittest import TestCase
 
