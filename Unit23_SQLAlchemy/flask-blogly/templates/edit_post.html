@@ -7,7 +7,18 @@
     <input name="title" type="text" value="{{post.title}}">
     <label for="content">Post Content</label>
     <input name="content" type="text" value="{{post.content}}">
+    {% for tag in tags %}
+    <div style="display:block">
+        {% if tag in post_tags %}
+            <label><input name="tags" value={{tag.id}} id="tag_{{tag.id}}" type="checkbox" style="display:inline" checked>{{tag.name}}</label>
+        {% else %}
+            <label><input name="tags" value={{tag.id}} id="tag_{{tag.id}}" type="checkbox" style="display:inline">{{tag.name}}</label>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div style="display:block">
     <button type="submit" formmethod="GET" formaction="/users/{{user.id}}">Cancel</button>
     <button type="submit"formmethod="POST" formaction="/posts/{{post.id}}/edit">Edit</button>
+    </div>
 </form>
 {% endblock %}

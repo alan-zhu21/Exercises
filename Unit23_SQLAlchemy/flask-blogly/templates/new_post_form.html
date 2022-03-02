@@ -7,7 +7,12 @@
         <input name="title" type="text">
         <label for="post_content">Content</label>
         <input name="post_content" type="text">
+        {% for tag in tags %}
+        <div style="display:block"><label><input type="checkbox" style="display:inline">{{tag.name}}</label></div>
+        {% endfor %}
+        <div style="display:block">
         <button type="submit" name="submitted" value="cancel">Cancel</button>
         <button type="submit" name="submitted" value="no_cancel">Add</button>
+        </div>
     </form>
 {% endblock %}

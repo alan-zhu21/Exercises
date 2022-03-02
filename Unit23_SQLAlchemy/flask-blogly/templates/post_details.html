@@ -4,6 +4,11 @@
     <h1>{{post.title}}</h1>
     <p>{{post.content}}</p>
     <p>By {{user.first_name}} {{user.last_name}}</p>
+    <p style="display:inline">Tags:
+    {% for tag in post.tags %}
+    <div class="tag">{{tag.name}}</div>
+    {% endfor %}
+    </p>
     <form action="/users/{{user.id}}" method="GET">
         <button type="submit">Back to User Page</button>
     </form>

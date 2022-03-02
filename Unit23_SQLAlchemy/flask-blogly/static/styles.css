@@ -9,3 +9,14 @@ img {
 h2 {
 	display: inline-block;
 }
+
+.tag {
+	border: 1px solid;
+	display: inline;
+	border-radius: 5px;
+	padding: 2px;
+	background-color: blue;
+	color: white;
+	border-color: blue;
+	font-size: 12px;
+}
