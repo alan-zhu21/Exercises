@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Edit Pet Details{% endblock %}
+
+{% block content %}
+<h1>{{pet.name}}</h1>
+<p>{{pet.species}}</p>
+{% if pet.photo_url %}
+<img src="{{pet.photo_url}}" alt="No Photo Available">
+{% endif %}
+{% if pet.age %}
+<p>{{pet.age}} year(s) old</p>
+{% endif %}
+<hr>
+<h2>Update Pet Information</h2>
+
+<form method="POST">
+    {% include '_form.html' %}
+    <button type="submit">Update</button>
+</form>
+
+{% endblock %}
