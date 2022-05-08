@@ -1,0 +1,29 @@
+img {
+    position: absolute;
+    display: block;
+    margin-left: 80px;
+}
+
+button {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border-color: gray;
+    background-color: rgba(128, 0, 128, .8);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#cards_here {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+body {
+    background-color: green;
+}
