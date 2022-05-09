@@ -1,0 +1,23 @@
+{
+  "name": "node-exercise",
+  "version": "1.0.0",
+  "description": "31.4",
+  "main": "firstNodeFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alan-zhu21/Exercises.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alan-zhu21/Exercises/issues"
+  },
+  "homepage": "https://github.com/alan-zhu21/Exercises#readme"
+}
