@@ -1,0 +1,22 @@
+{
+  "name": "markov",
+  "version": "1.0.0",
+  "description": "Exercise 31.5",
+  "main": "makeText.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alan-zhu21/Exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alan-zhu21/Exercises/issues"
+  },
+  "homepage": "https://github.com/alan-zhu21/Exercises#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
