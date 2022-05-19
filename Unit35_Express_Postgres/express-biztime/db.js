@@ -2,9 +2,17 @@
 
 const { Client } = require('pg');
 
-let db = new Client({
-	connectionString: 'postgresql:///biztime'
-});
+let db;
+
+if (process.env.NODE_ENV === 'test') {
+	db = new Client({
+		connectionString: 'postgresql:///biztime_test'
+	});
+} else {
+	db = new Client({
+		connectionString: 'postgresql:///biztime'
+	});
+}
 
 db.connect();
 

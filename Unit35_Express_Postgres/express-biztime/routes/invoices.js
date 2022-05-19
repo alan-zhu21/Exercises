@@ -19,7 +19,7 @@ router.get('/:id', async (req, res, next) => {
 			`SELECT i.id, i.amt, i.paid, i.add_date, i.paid_date, c.code, c.name, c.description FROM invoices AS i JOIN companies AS c ON c.code=i.comp_code WHERE i.id = ${id}`
 		);
 		if (results.rows.length === 0) {
-			throw new ExpressError(`Cannot find invoice: ${err}`, 404);
+			throw new ExpressError(`Cannot find invoice`, 404);
 		}
 		let data = results.rows[0];
 		let invoice = {
@@ -40,7 +40,7 @@ router.get('/:id', async (req, res, next) => {
 	}
 });
 
-// Post a new company
+// Post a new invoice
 router.post('/', async function(req, res, next) {
 	try {
 		let { comp_code, amt } = req.body;
@@ -52,7 +52,7 @@ router.post('/', async function(req, res, next) {
 			[ comp_code, amt ]
 		);
 
-		return res.json({ invoice: result.rows[0] });
+		return res.status(201).json({ invoice: result.rows[0] });
 	} catch (err) {
 		return next(err);
 	}
