@@ -1,19 +1,17 @@
 {
-  "name": "biztime",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "alan",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "pg": "^8.2.0",
-    "slugify": "^1.3.1",
-    "supertest": "^3.3.0"
+    "pg": "^8.7.3",
+    "slugify": "^1.6.5"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "express-biztime",
+  "version": "1.0.0",
+  "main": "app.js",
   "keywords": [],
+  "author": "",
+  "license": "ISC",
   "description": ""
 }

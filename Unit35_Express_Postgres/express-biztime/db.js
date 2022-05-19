@@ -1,13 +1,11 @@
 /** Database setup for BizTime. */
 
-const password = require('./secret');
 const { Client } = require('pg');
 
-const client = new Client({
-	connectionString: 'postgresql:///biztime',
-	password: `${password}`
+let db = new Client({
+	connectionString: 'postgresql:///biztime'
 });
 
-client.connect();
+db.connect();
 
-module.exports = client;
+module.exports = db;
