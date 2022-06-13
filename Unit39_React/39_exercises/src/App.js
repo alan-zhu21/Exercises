@@ -1,8 +1,12 @@
 import React from 'react';
-import Pokedex from './Pokedex';
+import EightBall from './EightBall';
 
 const App = () => {
-	return <Pokedex />;
+	return (
+		<div>
+			<EightBall />
+		</div>
+	);
 };
 
 export default App;
