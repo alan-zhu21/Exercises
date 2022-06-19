@@ -1,12 +1,13 @@
-import React from 'react';
-import EightBall from './EightBall';
+import React from "react";
+import "./App.css";
+import Carousel from "./Carousel";
 
-const App = () => {
-	return (
-		<div>
-			<EightBall />
-		</div>
-	);
-};
+function App() {
+  return (
+    <div className="App">
+      <Carousel />
+    </div>
+  );
+}
 
 export default App;
