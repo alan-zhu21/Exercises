@@ -1,13 +1,11 @@
 import React from "react";
-import Board from "./Board";
 import "./App.css";
-
-/** Simple app that just shows the LightsOut game. */
+import Carousel from "./Carousel";
 
 function App() {
   return (
     <div className="App">
-      <Board />
+      <Carousel />
     </div>
   );
 }
