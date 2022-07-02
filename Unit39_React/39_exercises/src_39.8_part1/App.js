@@ -1,12 +1,12 @@
 import React from 'react';
-import TodoList from './TodoList';
+import BoxList from './BoxList';
 
-function App() {
+const App = () => {
 	return (
 		<div>
-			<TodoList />
+			<BoxList />
 		</div>
 	);
-}
+};
 
 export default App;
