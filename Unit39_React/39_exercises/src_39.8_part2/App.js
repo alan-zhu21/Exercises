@@ -1,10 +1,10 @@
 import React from 'react';
-import DeckofCards from './DeckofCards';
+import TodoList from './TodoList';
 
 function App() {
 	return (
 		<div>
-			<DeckofCards />
+			<TodoList />
 		</div>
 	);
 }
